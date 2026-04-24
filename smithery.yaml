@@ -1,0 +1,35 @@
+startCommand:
+  type: stdio
+  configSchema:
+    type: object
+    required: ["apifyToken"]
+    properties:
+      apifyToken:
+        type: string
+        title: Apify API Token
+        description: Get one free at https://console.apify.com/account/integrations
+        format: password
+      defaultMaxQueriesPerPlatform:
+        type: integer
+        title: Default maxQueriesPerPlatform
+        description: Used when the agent doesn't specify (each query × platform = one billed check on the underlying Apify actor)
+        default: 3
+        minimum: 1
+        maximum: 20
+      maxQueriesCeiling:
+        type: integer
+        title: Hard cap for maxQueriesPerPlatform
+        description: Protects your Apify credits — agent cannot exceed this value
+        default: 10
+        minimum: 1
+        maximum: 20
+  commandFunction: |-
+    (config) => ({
+      command: "npx",
+      args: ["-y", "ai-brand-monitor-mcp"],
+      env: {
+        APIFY_TOKEN: config.apifyToken,
+        DEFAULT_MAX_QUERIES: String(config.defaultMaxQueriesPerPlatform ?? 3),
+        MAX_QUERIES_CEILING: String(config.maxQueriesCeiling ?? 10)
+      }
+    })

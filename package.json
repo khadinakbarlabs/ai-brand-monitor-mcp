@@ -1,0 +1,79 @@
+{
+  "name": "ai-brand-monitor-mcp",
+  "version": "0.1.0",
+  "description": "AI Brand Monitor MCP server — track how your brand appears in Perplexity, ChatGPT, Claude and Gemini search results directly inside Claude, Cursor, Codex, Windsurf and any MCP-compatible AI agent. Measure GEO visibility, citations, and share-of-voice across AI search platforms.",
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "ai-brand-monitor",
+    "brand-monitoring",
+    "geo",
+    "generative-engine-optimization",
+    "ai-search",
+    "ai-seo",
+    "perplexity",
+    "chatgpt",
+    "claude",
+    "gemini",
+    "brand-visibility",
+    "share-of-voice",
+    "citations",
+    "competitor-analysis",
+    "cursor",
+    "codex",
+    "windsurf",
+    "ai-agent",
+    "apify",
+    "mcp-server"
+  ],
+  "license": "MIT",
+  "author": {
+    "name": "Khadin Akbar",
+    "url": "https://github.com/khadinakbaronline"
+  },
+  "homepage": "https://github.com/khadinakbaronline/ai-brand-monitor-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/khadinakbaronline/ai-brand-monitor-mcp/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khadinakbaronline/ai-brand-monitor-mcp.git"
+  },
+  "type": "module",
+  "bin": {
+    "ai-brand-monitor-mcp": "dist/index.js",
+    "ai-brand-mcp": "dist/index.js"
+  },
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "server.json"
+  ],
+  "scripts": {
+    "build": "tsc && chmod +x dist/index.js",
+    "dev": "tsx watch src/index.ts",
+    "start": "node dist/index.js",
+    "inspect": "npx @modelcontextprotocol/inspector node dist/index.js",
+    "typecheck": "tsc --noEmit",
+    "prepare": "npm run build",
+    "prepublishOnly": "npm run build"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.20.0",
+    "apify-client": "^2.12.0",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "tsx": "^4.19.0",
+    "typescript": "^5.6.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

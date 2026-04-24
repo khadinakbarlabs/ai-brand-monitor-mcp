@@ -1,0 +1,61 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.khadinakbaronline/ai-brand-monitor-mcp",
+  "description": "AI Brand Monitor MCP — track brand mentions, citations, and GEO visibility across Perplexity, ChatGPT, Claude, and Gemini from inside any AI agent.",
+  "repository": {
+    "url": "https://github.com/khadinakbaronline/ai-brand-monitor-mcp",
+    "source": "github"
+  },
+  "version": "0.1.0",
+  "remotes": [
+    {
+      "type": "streamable-http",
+      "url": "https://mcp.apify.com?tools=khadinakbar/ai-search-brand-monitor"
+    }
+  ],
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "ai-brand-monitor-mcp",
+      "version": "0.1.0",
+      "transport": { "type": "stdio" },
+      "runtimeHint": "npx",
+      "runtimeArguments": [
+        { "type": "positional", "value": "-y" },
+        { "type": "positional", "value": "ai-brand-monitor-mcp" }
+      ],
+      "environmentVariables": [
+        {
+          "name": "APIFY_TOKEN",
+          "description": "Apify API token — https://console.apify.com/account/integrations",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ],
+  "categories": ["marketing", "analytics"],
+  "tags": [
+    "ai-brand-monitor",
+    "brand-monitoring",
+    "geo",
+    "generative-engine-optimization",
+    "ai-search",
+    "ai-seo",
+    "perplexity",
+    "chatgpt",
+    "claude",
+    "gemini",
+    "share-of-voice",
+    "citations",
+    "competitor-analysis",
+    "apify",
+    "mcp"
+  ],
+  "author": {
+    "name": "Khadin Akbar",
+    "url": "https://github.com/khadinakbaronline"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/khadinakbaronline/ai-brand-monitor-mcp#readme"
+}
