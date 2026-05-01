@@ -1,6 +1,6 @@
 {
   "name": "ai-brand-monitor-mcp",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "AI Brand Monitor MCP server — track how your brand appears in Perplexity, ChatGPT, Claude and Gemini search results directly inside Claude, Cursor, Codex, Windsurf and any MCP-compatible AI agent. Measure GEO visibility, citations, and share-of-voice across AI search platforms.",
   "keywords": [
     "mcp",

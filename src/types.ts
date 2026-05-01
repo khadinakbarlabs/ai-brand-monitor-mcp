@@ -8,6 +8,7 @@ export interface BrandCheckRecord {
   brand_name?: string;
   brand_mentioned?: boolean;
   brand_mention_count?: number;
+  brand_share_of_voice?: number;
   mention_position_score?: number;
   mention_context?: string | null;
   sentiment?: Sentiment;
@@ -16,6 +17,7 @@ export interface BrandCheckRecord {
   cited_urls?: string[];
   total_sources_cited?: number;
   competitor_mentions?: string[];
+  competitor_mention_count?: number;
   ai_response_summary?: string;
   model_used?: string;
   scraped_at?: string;
@@ -27,6 +29,7 @@ export interface PlatformScore {
   avg_position: number;
   citation_rate: number;
   sentiment: Sentiment;
+  share_of_voice?: number;
 }
 
 export interface RunSummary {
@@ -35,10 +38,12 @@ export interface RunSummary {
   run_at?: string;
   total_checks?: number;
   overall_mention_rate?: number;
+  overall_share_of_voice?: number;
   geo_score?: number;
   overall_sentiment?: Sentiment;
   platform_scores?: Record<string, PlatformScore>;
   recommendations?: string[];
+  actor_version?: string;
   [key: string]: unknown;
 }
 

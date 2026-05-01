@@ -12,6 +12,12 @@ export interface ActorInput {
   queryTemplates?: string[];
   customQueries?: string[];
   maxQueriesPerPlatform?: number;
+  /**
+   * `concise` ≈ 200-char ai_response_summary + 150-char mention_context.
+   * `detailed` (default) ≈ 800-char + 330-char.
+   * MCP wrapper defaults to `concise` to keep agent token budgets tight.
+   */
+  responseFormat?: "concise" | "detailed";
 }
 
 // Per-item token budget: keep full-text response trimmed so 20 items stay < 10k tokens
@@ -27,6 +33,7 @@ const PREVIEW_FIELDS: Array<keyof BrandCheckRecord> = [
   "brand_name",
   "brand_mentioned",
   "brand_mention_count",
+  "brand_share_of_voice",
   "mention_position_score",
   "mention_context",
   "sentiment",
@@ -35,6 +42,7 @@ const PREVIEW_FIELDS: Array<keyof BrandCheckRecord> = [
   "cited_urls",
   "total_sources_cited",
   "competitor_mentions",
+  "competitor_mention_count",
   "ai_response_summary",
   "model_used",
   "scraped_at",
@@ -55,9 +63,14 @@ export class ApifyActorClient {
     const requested = input.maxQueriesPerPlatform ?? this.config.defaultMaxQueries;
     const maxQueriesPerPlatform = Math.min(requested, this.config.maxQueriesCeiling);
 
+    // MCP consumers are token-sensitive — default to `concise` upstream
+    // unless the caller explicitly asks for `detailed`.
+    const responseFormat: "concise" | "detailed" = input.responseFormat ?? "concise";
+
     const runInput: ActorInput = {
       ...input,
       maxQueriesPerPlatform,
+      responseFormat,
     };
 
     const run = await this.client

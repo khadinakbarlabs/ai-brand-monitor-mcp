@@ -68,7 +68,8 @@ npm run inspect
 ~/apify-actors/ — see master CLAUDE.md. Upstream Apify actor logbook lives at `~/apify-actors/ai-search-brand-monitor/CLAUDE.md`.
 
 ## Changelog
+- 2026-05-01 (v0.2.0): Surface upstream actor v1.6 fields. Added `brand_share_of_voice` and `competitor_mention_count` to BrandCheckRecord, `overall_share_of_voice` and `actor_version` to RunSummary, `share_of_voice` to PlatformScore. Threaded `responseFormat: "concise" | "detailed"` through ActorInput — wrapper defaults to `concise` for token-sensitive agent consumers (overrides actor's `detailed` default). PREVIEW_FIELDS expanded to include the new fields.
 - 2026-04-24 (v0.1.0): Scaffolded from google-maps-scraper-mcp template. Two tools live, stdio transport verified, README/LICENSE/CONTRIBUTING in place. Not yet published to npm or GitHub.
 
 ## Last worked
-2026-04-24
+2026-05-01
