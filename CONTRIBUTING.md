@@ -12,7 +12,7 @@ Thanks for thinking about contributing! This project has a deliberately small su
 ## Development setup
 
 ```bash
-git clone https://github.com/khadinakbaronline/ai-brand-monitor-mcp.git
+git clone https://github.com/khadinakbarlabs/ai-brand-monitor-mcp.git
 cd ai-brand-monitor-mcp
 npm install
 cp .env.example .env  # set APIFY_TOKEN

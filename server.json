@@ -1,9 +1,9 @@
 {
   "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
-  "name": "io.github.khadinakbaronline/ai-brand-monitor-mcp",
+  "name": "io.github.khadinakbarlabs/ai-brand-monitor-mcp",
   "description": "AI Brand Monitor MCP — track brand mentions, citations, and GEO visibility across Perplexity, ChatGPT, Claude, and Gemini from inside any AI agent.",
   "repository": {
-    "url": "https://github.com/khadinakbaronline/ai-brand-monitor-mcp",
+    "url": "https://github.com/khadinakbarlabs/ai-brand-monitor-mcp",
     "source": "github"
   },
   "version": "0.2.0",
@@ -54,8 +54,8 @@
   ],
   "author": {
     "name": "Khadin Akbar",
-    "url": "https://github.com/khadinakbaronline"
+    "url": "https://github.com/khadinakbarlabs"
   },
   "license": "MIT",
-  "homepage": "https://github.com/khadinakbaronline/ai-brand-monitor-mcp#readme"
+  "homepage": "https://github.com/khadinakbarlabs/ai-brand-monitor-mcp#readme"
 }

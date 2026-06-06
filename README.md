@@ -222,7 +222,7 @@ url = "https://mcp.apify.com?tools=khadinakbar/ai-search-brand-monitor"
 ### Manual install (clone + build)
 
 ```bash
-git clone https://github.com/khadinakbaronline/ai-brand-monitor-mcp.git
+git clone https://github.com/khadinakbarlabs/ai-brand-monitor-mcp.git
 cd ai-brand-monitor-mcp
 npm install
 npm run build
@@ -339,4 +339,4 @@ See [CONTRIBUTING.md](CONTRIBUTING.md). PRs welcome for:
 
 MIT — see [LICENSE](LICENSE).
 
-Built by [Khadin Akbar](https://github.com/khadinakbaronline) on top of the production [ai-search-brand-monitor](https://apify.com/khadinakbar/ai-search-brand-monitor) Apify actor.
+Built by [Khadin Akbar](https://github.com/khadinakbarlabs) on top of the production [ai-search-brand-monitor](https://apify.com/khadinakbar/ai-search-brand-monitor) Apify actor.

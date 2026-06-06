@@ -29,15 +29,15 @@
   "license": "MIT",
   "author": {
     "name": "Khadin Akbar",
-    "url": "https://github.com/khadinakbaronline"
+    "url": "https://github.com/khadinakbarlabs"
   },
-  "homepage": "https://github.com/khadinakbaronline/ai-brand-monitor-mcp#readme",
+  "homepage": "https://github.com/khadinakbarlabs/ai-brand-monitor-mcp#readme",
   "bugs": {
-    "url": "https://github.com/khadinakbaronline/ai-brand-monitor-mcp/issues"
+    "url": "https://github.com/khadinakbarlabs/ai-brand-monitor-mcp/issues"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/khadinakbaronline/ai-brand-monitor-mcp.git"
+    "url": "git+https://github.com/khadinakbarlabs/ai-brand-monitor-mcp.git"
   },
   "type": "module",
   "bin": {
