@@ -1,3 +1,5 @@
+[![MseeP.ai Security Assessment Badge](https://mseep.net/pr/khadinakbarlabs-ai-brand-monitor-mcp-badge.png)](https://mseep.ai/app/khadinakbarlabs-ai-brand-monitor-mcp)
+
 # AI Brand Monitor MCP
 
 > **The AI-Search brand-visibility MCP for AI agents — OAuth in 30 seconds, no API keys.** Track how your brand appears in Perplexity, ChatGPT, Claude and Gemini search results directly inside Claude, Cursor, Codex, Windsurf, ChatGPT and any MCP-compatible AI client.
